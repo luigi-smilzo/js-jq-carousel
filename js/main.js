@@ -27,30 +27,30 @@ $(document).ready( function() {
 });
 
 // FUNCTIONS
-function prevImg (active, last, dot, lastDot) {
-    if ( active.hasClass('first')) {
-        active.removeClass('active');
-        last.addClass('active');
-        dot.removeClass('active')
+function prevImg (activeImg, lastImg, activeDot, lastDot) {
+    if ( activeImg.hasClass('first')) {
+        activeImg.removeClass('active');
+        lastImg.addClass('active');
+        activeDot.removeClass('active')
         lastDot.addClass('active');
     } else {
-        active.removeClass('active');
-        active.prev().addClass('active');
-        dot.removeClass('active');
-        dot.prev().addClass('active');
+        activeImg.removeClass('active');
+        activeImg.prev().addClass('active');
+        activeDot.removeClass('active');
+        activeDot.prev().addClass('active');
     }
 }
 
-function nextImg (active, first, dot, firstDot) {
-    if ( active.hasClass('last')) {
-        active.removeClass('active');
-        first.addClass('active');
-        dot.removeClass('active')
+function nextImg (activeImg, firstImg, activeDot, firstDot) {
+    if ( activeImg.hasClass('last')) {
+        activeImg.removeClass('active');
+        firstImg.addClass('active');
+        activeDot.removeClass('active')
         firstDot.addClass('active');
     } else {
-        active.removeClass('active');
-        active.next().addClass('active');
-        dot.removeClass('active');
-        dot.next().addClass('active');
+        activeImg.removeClass('active');
+        activeImg.next().addClass('active');
+        activeDot.removeClass('active');
+        activeDot.next().addClass('active');
     }
 }
