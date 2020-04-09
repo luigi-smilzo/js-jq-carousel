@@ -24,7 +24,25 @@ $(document).ready( function() {
 
         prevImg(activeImg, lastImg, activeDot, lastDot);
     });
+    
+    $(document).keydown(function(e) {
+        
+        if (e.keyCode == 37) {
+
+            var activeImg = $('.img-container img.active');
+            var activeDot = $('.dot.active');
+
+            prevImg(activeImg, lastImg, activeDot, lastDot);
+        } else if (e.keyCode == 39) {
+
+            var activeImg = $('.img-container img.active');
+            var activeDot = $('.dot.active');
+
+            nextImg(activeImg, firstImg, activeDot, firstDot);
+        }
+    });
 });
+
 
 // FUNCTIONS
 function prevImg (activeImg, lastImg, activeDot, lastDot) {
