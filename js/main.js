@@ -9,13 +9,12 @@ $(document).ready( function() {
     var lastDot = $('.last.dot');
     
     // EVENTS
+    // Clicks
     arrowRight.click( function() {
         var activeImg = $('.img-container img.active');
         var activeDot = $('.dot.active');
 
         nextImg(activeImg, firstImg, activeDot, firstDot);
-        
-        
     });
     
     arrowLeft.click( function() {
@@ -25,16 +24,15 @@ $(document).ready( function() {
         prevImg(activeImg, lastImg, activeDot, lastDot);
     });
     
+    // Keydown
     $(document).keydown(function(e) {
         
         if (e.keyCode == 37) {
-
             var activeImg = $('.img-container img.active');
             var activeDot = $('.dot.active');
 
             prevImg(activeImg, lastImg, activeDot, lastDot);
         } else if (e.keyCode == 39) {
-
             var activeImg = $('.img-container img.active');
             var activeDot = $('.dot.active');
 
