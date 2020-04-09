@@ -19,4 +19,16 @@ $(document).ready( function() {
             activeImg.next().addClass('active');
         }
     });
+    
+    arrowLeft.click( function() {
+        var activeImg = $('.img-container img.active');
+        
+        if ( activeImg.hasClass('first')) {
+            activeImg.removeClass('active');
+            lastImg.addClass('active');
+        } else {
+            activeImg.removeClass('active');
+            activeImg.prev().addClass('active');
+        }
+    });
 });
